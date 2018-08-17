@@ -4,6 +4,8 @@ import axios from 'axios';
 
 import { Container, Row, Col } from 'reactstrap';
 
+import AlbumItem from './AlbumItem';
+
 import '../Styles/AlbumList.css';
 
 export default class AlbumList extends React.Component {
@@ -26,12 +28,8 @@ export default class AlbumList extends React.Component {
       <Container>
         <Row className="albums-row">
           { this.state.albums.map((album, index) =>
-          <Col xs="12" sm="4" className="single-album">
-            <h4> {index + 1}</h4>
-            <img src={album["im:image"][2].label} width={170} />
-            <div className="album-name">{album.title.label}</div>
-            <div className="artist-name">{album["im:artist"].label}</div>
-            </Col>)}
+            <AlbumItem album={album} index={index} />
+          )}
         </Row>
       </Container>
 

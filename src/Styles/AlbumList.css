@@ -5,3 +5,15 @@
 .single-album{
   padding-top: 20px;
 }
+
+.caption{
+  padding: 10px 0px;
+}
+
+.artist-name{
+  color: #178ed7;
+}
+
+.album-name{
+  font-weight: bold;
+}
